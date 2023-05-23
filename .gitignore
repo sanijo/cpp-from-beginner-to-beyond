@@ -1,0 +1,7 @@
+OOP_template/
+Template/
+**/main
+**/*.out
+**/*.exe
+**/*.tar.gz
+**/*un.~

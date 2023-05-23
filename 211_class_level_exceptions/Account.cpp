@@ -1,0 +1,44 @@
+#include "Account.h"
+#include "Illegal_balance_exception.h"
+
+Account::Account(std::string name, double balance) 
+    : name{name}, balance{balance} {
+        if (balance < 0)
+            throw IllegalBalanceException();
+}
+
+bool Account::deposit(double amount) {
+    if (amount < 0) 
+        return false;
+    else {
+        balance += amount;
+        return true;
+    }
+}
+
+bool Account::withdraw(double amount) {
+    if (balance-amount >=0) {
+        balance-=amount;
+        return true;
+    } else
+        return false;
+}
+
+double Account::get_balance() const {
+    return balance;
+}
+
+void Account::print(std::ostream &os) const
+{
+    os << "[Account: " << name << ": " << balance << "]";
+}
+
+bool Account::operator+=(double rhs)
+{
+    return this->deposit(rhs);
+}
+
+bool Account::operator-=(double rhs)
+{
+    return this->withdraw(rhs);
+}

@@ -1,0 +1,5 @@
+https://github.com/styvon/cPCG/blob/master/src/rcpparma_cPCG.cpp
+
+https://www.mathworks.com/matlabcentral/fileexchange/34980-cofactor-matrix-generator
+
+https://github.com/douglasrizzo/matrix/blob/master/Matrix.hpp
